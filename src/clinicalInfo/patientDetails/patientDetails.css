@@ -1,0 +1,165 @@
+.patient-info{
+    width: 256px;
+    background: #646464;
+    padding: 30px 20px 0;
+    height: 100%;
+    color: #fff;
+}
+.patient-name{
+    position: relative;
+}
+.patient-name h3{
+    margin: 0 -3px 25px;
+    line-height: 26px;
+    font-size: 26px;
+    text-align: left;
+    font-weight: 300;
+}
+.patient-edit{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+.patient-edit:hover{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+.patient-info-item{
+    margin-bottom: 25px;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: normal;
+}
+.patient-info-label{
+    font-size: 12px;
+}
+
+
+
+.diagnoses{
+    margin: 0;
+    justify-content: flex-start
+}
+.diagnoses .col-lg-6{
+    align-items: stretch;
+    padding: 0;
+}
+.diagnoses-header, .patient-header{
+    line-height: 20px;
+    padding: 17px 20px;
+    background: #3dbafc;
+    font-size: 18px;
+    color: #fff;
+}
+.diagnoses-history{
+    background: #f1f1f1;
+}
+.diagnoses-history .diagnoses-header{
+    background: #64c8fd;
+}
+.diagnoses-table.table{
+    table-layout: fixed;
+    margin-bottom: 0;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    color: #333;
+} 
+.diagnoses-table.table tr th, .diagnoses-table.table tr td{
+    padding: 18px 0 18px 30px;
+    line-height: 18px;
+    vertical-align: middle;
+    border: none;
+}
+.diagnoses-table.table tr th{
+    background: #e8e8e8;
+}
+
+.diagnoses-table.table tbody tr:not(:last-child){
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.diagnoses-table .code{
+    width: 15%;
+}
+.diagnoses-table .diagnos{
+    width: 54%;
+}
+.diagnoses-table .date{
+    width: 18%;
+}
+.diagnoses-table td.actions{
+    width: 10%;
+    padding: 0;
+}
+.diagnoses-table .actions .glyphicon{
+    text-decoration: none;
+    font-size: 22px;
+    margin: 0 2px
+}
+.actions .edit{
+    color: #ccc;
+}
+.actions .delete {
+    color: #ff4647;
+}
+.add-diagnos{
+    position: fixed;
+    top: 18px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    border-radius: 50%;
+    background: #333333;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.24);
+    color: #fff;
+    font-size: 27px;
+}
+.add-diagnos:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.ui-form{
+    padding-right: 30px;
+}
+.ui-form .form-group{
+    padding: 25px 0 5px 30px;
+}
+.form-group__half{
+    width: 326px;
+}
+.form-group__2half{
+    width: 682px;
+}
+.ui-form label {
+    margin: 0;
+    line-height: 14px;
+    font-weight: normal;
+    font-size: 12px;
+    color: #5e5e5e;
+}
+.ui-form .form-control{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #ccc;
+    box-shadow: none;
+    border-radius: 0;
+}
+.btn-blue{
+    padding: 7px 32px;
+    border: none;
+    background: #3dbafb;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.24);
+}
+.btn-blue:hover{
+    margin: 1px 0 0 1px;
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.24);
+    color: #fff;
+}

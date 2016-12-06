@@ -1,0 +1,14 @@
+<div class="patient-info">
+    <div class="patient-name">
+        <h3>{{ctrl.patient.name || 'No Information'}}</h3>
+        <a ui-sref="^.details.edit({patientId: ctrl.patient.id})" class="glyphicon glyphicon-pencil patient-edit"></a>
+    </div>
+    <div class="patient-info-item">
+        <span class="patient-info-label">Birthday:</span>
+        <div>{{(ctrl.patient.dob | date: 'MM/dd/yyyy') || 'No Information'}}</div>
+    </div>
+    <div class="patient-info-item">
+        <span class="patient-info-label">Address:</span>
+        <div>{{ctrl.patient.address || 'No Information'}}</div>
+    </div>
+</div>

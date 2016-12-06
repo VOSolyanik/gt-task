@@ -1,0 +1,11 @@
+<div class="sidebar-container" ui-view="patientInfo"></div>
+<div class="content">
+    <div class="ui-subheader">
+        <ul class="breadcrumbs">
+            <li><a href="#">Patients</a></li>
+            <li ng-show="ctrl.patient">></li>
+            <li ng-show="ctrl.patient">{{ctrl.patient.name || 'No information'}}</li>
+        </ul>
+    </div>
+    <ui-view class="page-container"></ui-view>
+</div>

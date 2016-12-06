@@ -1,0 +1,52 @@
+<div class="diagnoses row m-h-100">
+    <div class="col-lg-6 h-100 ">
+        <div class="diagnoses-header">Current Diagnoses:</div>
+        <table class="table diagnoses-table" ng-show="ctrl.diagnoses.length">
+            <thead>
+                <tr>
+                    <th class="code">Code</th>
+                    <th class="diagnos">Diagnosie</th>
+                    <th class="date">Additional Date</th>
+                    <th class="actions"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in ctrl.diagnoses">
+                    <td>{{d.code}}</td>
+                    <td>{{d.diagnos}}</td>
+                    <td>{{d.createDate | date: 'MM/dd/yyyy'}}</td>
+                    <td class="actions">
+                        <a ui-sref="^.diagnoseEdit({diagnosId: d.id})" class="glyphicon glyphicon-pencil edit"></a>
+                        <a ng-click="ctrl.deleteDiagnose($index)" href="javascript:void(0)" class="glyphicon glyphicon-remove-sign delete"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 ng-hide="ctrl.diagnoses.length" class="text-center">No Diagnoses</h2>
+    </div>
+    <div class="col-lg-6 h-100 diagnoses-history">
+        <div class="diagnoses-header diagnoses-header__history">
+            Diagnoses History:
+        </div>
+        <table class="table diagnoses-table"  ng-show="ctrl.history.length">
+            <thead>
+                <tr>
+                    <th class="code">Code</th>
+                    <th class="diagnos">Diagnosie</th>
+                    <th class="date">Additional Date</th>
+                    <th class="date">Removal Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="h in ctrl.history">
+                    <td>{{h.code}}</td>
+                    <td>{{h.diagnos}}</td>
+                    <td>{{h.createDate | date: 'MM/dd/yyyy'}}</td>
+                    <td>{{h.deleteDate | date: 'MM/dd/yyyy'}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 ng-hide="ctrl.history.length" class="text-center">No Diagnoses</h2>
+    </div>
+</div>
+<a ui-sref="^.diagnoseAdd" class="add-diagnos">+</a>

@@ -1,0 +1,29 @@
+.sidebar-container{
+    position: absolute;
+    height: calc(100% - 36px);
+}
+.content{
+    margin-left: 256px;
+    height: 100%;
+}
+.ui-subheader{
+    height: 36px;
+    padding: 10px 20px;
+    line-height: 16px;
+    background: #f1f1f1;
+}
+
+.breadcrumbs{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.breadcrumbs li{
+    display: inline-block;
+    color: #5e5e5e;
+}
+
+.breadcrumbs a{
+    text-decoration: none;
+    color: #3dbafb;
+}
