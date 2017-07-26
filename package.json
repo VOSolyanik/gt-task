@@ -11,9 +11,10 @@
   "dependencies": {
     "angular": "^1.5.9",
     "angular-material": "^1.1.1",
+    "angular-messages": "^1.6.5",
     "angular-ui-router": "^0.2.18",
-    "ngstorage": "^0.3.11",
-    "bootstrap": "^3.3.5"
+    "bootstrap": "^3.3.5",
+    "ngstorage": "^0.3.11"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.0",

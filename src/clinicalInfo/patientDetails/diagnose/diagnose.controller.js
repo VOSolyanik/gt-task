@@ -1,4 +1,4 @@
-import {Diagnos} from '../../common/services/diagnoses.service';
+import {Diagnos} from '../../../common/services/diagnoses.service';
 
 export default class DiagnoseController {
     constructor($state, diagnosesService) {

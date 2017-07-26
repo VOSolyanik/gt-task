@@ -18,25 +18,25 @@ export default function route($stateProvider) {
         })
         .state('app.clinicalInfo.patients.details.edit', {
             url: 'edit',
-            template: require('./patient.tpl.html'),
+            template: require('./edit/patient.tpl.html'),
             controller: 'PatientController',
             controllerAs: 'ctrl'
         })
         .state('app.clinicalInfo.patients.details.diagnoses', {
             url: 'diagnoses',
-            template: require('./patientDiagnoses.tpl.html'),
+            template: require('./diagnoses/patientDiagnoses.tpl.html'),
             controller: 'PatientDiagnosesController',
             controllerAs: 'ctrl'
         })
         .state('app.clinicalInfo.patients.details.diagnoseEdit', {
             url: 'diagnoses/{diagnosId}/edit',
-            template: require('./diagnose.tpl.html'),
+            template: require('./diagnose/diagnose.tpl.html'),
             controller: 'DiagnoseController',
             controllerAs: 'ctrl'
         })
         .state('app.clinicalInfo.patients.details.diagnoseAdd', {
             url: 'diagnoses/new',
-            template: require('./diagnose.tpl.html'),
+            template: require('./diagnose/diagnose.tpl.html'),
             controller: 'DiagnoseController',
             controllerAs: 'ctrl'
         });

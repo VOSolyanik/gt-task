@@ -1,15 +1,21 @@
 <div class="patient-header">Edit Patient:</div>
 <form name="patientForm" class="ui-form" ng-submit="ctrl.save($event)" novalidate>
     <div class="clearfix">
-        <div class="form-group form-group__half pull-left">
+        <div ng-class="{'has-error': patientForm.name.$dirty && patientForm.name.$invalid}" class="form-group form-group__half pull-left">
             <label for="name">Patient Name: *</label>
             <input type="text" class="form-control" id="name" name="name"
                 ng-model="ctrl.patient.name" required>
+            <div ng-show="patientForm.name.$dirty" ng-messages="patientForm.name.$error" role="alert" class="help-block">
+                <div ng-message="required">Field is required</div>
+            </div>
         </div>
-        <div class="form-group form-group__half pull-left">
+        <div ng-class="{'has-error': patientForm.dob.$dirty && patientForm.dob.$invalid}" class="form-group form-group__half pull-left">
             <label for="dob">DOB: *</label>
             <input type="text" class="form-control" id="dob" name="dob"
                 ng-model="ctrl.patient.dob" required>
+            <div ng-show="patientForm.dob.$dirty" ng-messages="patientForm.dob.$error" role="alert" class="help-block">
+                <div ng-message="required">Field is required</div>
+            </div>
         </div>
     </div>
     <div class="form-group form-group__2half">

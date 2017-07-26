@@ -11,7 +11,6 @@ export default class NumberInput {
 
     link(scope, element, attrs, ngModelController) {
         const regexp = /^[0-9]\d*$/;
-        debugger;
         function isNumber(value) {return typeof value === 'number';}
 
         function isDefined(value) {return typeof value !== 'undefined';}
@@ -33,7 +32,7 @@ export default class NumberInput {
                 ngModelController.$modelValue + '' : '');
 
             ngModelController.$render();
-            return isNumber(ngModelController.$modelValue) ? 
+            return isNumber(ngModelController.$modelValue) ?
                     ngModelController.$modelValue : null;
         });
 
@@ -48,7 +47,7 @@ export default class NumberInput {
                 value = value.toString();
             }
             return value;
-        });        
+        });
 
         if (isDefined(attrs.min) || attrs.ngMin) {
             var minVal;

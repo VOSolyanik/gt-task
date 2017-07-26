@@ -1,0 +1,23 @@
+<div class="diagnoses-header">Add New Diagnos:</div>
+<form name="diagnoseForm" class="ui-form"  ng-submit="ctrl.save($event)" novalidate>
+    <div ng-class="{'has-error': diagnoseForm.code.$dirty && diagnoseForm.code.$invalid}" class="form-group form-group__half">
+        <label for="code">Code: *</label>
+        <input type="text" class="form-control" id="code" name="code"
+                ng-model="ctrl.diagnos.code" ng-minlength="6" number-input required>
+        <div ng-show="diagnoseForm.code.$dirty" ng-messages="diagnoseForm.code.$error" role="alert" class="help-block">
+            <div ng-message="required">Field is required</div>
+            <div ng-message="minlength">Field min length 6 numbers</div>
+        </div>
+    </div>
+    <div ng-class="{'has-error': diagnoseForm.diagnos.$dirty && diagnoseForm.diagnos.$invalid}" class="form-group">
+        <label for="diagnos">Diagnos: *</label>
+        <input type="text" class="form-control" id="diagnos" name="diagnos"
+                ng-model="ctrl.diagnos.diagnos" required>
+        <div ng-show="diagnoseForm.diagnos.$dirty" ng-messages="diagnoseForm.diagnos.$error" role="alert" class="help-block">
+            <div ng-message="required">Field is required</div>
+        </div>
+    </div>
+    <div class="clearfix">
+        <button class="btn pull-right btn-blue" ng-disabled="diagnoseForm.$invalid">Save</button>
+    </div>
+</form>
